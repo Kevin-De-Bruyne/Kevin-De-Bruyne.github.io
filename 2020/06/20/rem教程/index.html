@@ -79,20 +79,18 @@
 
 
 
-<meta name="description" content="首先我们要做的效果图是这样的​         然后我们要搭建vue框架，然后在vue框架的data函数里面定义一些数据，然后再对其进行调用 最后在methods函数里面定义点击事件，然后用一个空数组tab1遍历数组的数据，再用一个循环去获取数组的具体字段名称，用jq的append方法将其插入到div中 总结：这样的话不仅不用把数据写死在div中，又可以根据data数组的信息动态s生成排名和热度">
+<meta name="description" content="1. vw、vh、vmin、vmax 的含义（1）vw、vh、vmin、vmax 是一种视窗单位，也是相对单位。它相对的不是父节点或者页面的根节点。而是由视窗             （Viewport）大小来决定的，单位 1，代表类似于 1%。单位100则代表100%。 ​            视窗(Viewport)是你的浏览器实际显示内容的区域—，换句话说是你的不包括工具栏和按钮的网页浏览">
 <meta property="og:type" content="article">
-<meta property="og:title" content="用vue调用存储的数据，用jq的方法动态创建插入tab选项卡">
-<meta property="og:url" content="http://yoursite.com/2020/03/25/alen/index.html">
+<meta property="og:title" content="vw,vh和rem知识点">
+<meta property="og:url" content="http://yoursite.com/2020/06/20/rem%E6%95%99%E7%A8%8B/index.html">
 <meta property="og:site_name" content="De-Bruyne的小小博客">
-<meta property="og:description" content="首先我们要做的效果图是这样的​         然后我们要搭建vue框架，然后在vue框架的data函数里面定义一些数据，然后再对其进行调用 最后在methods函数里面定义点击事件，然后用一个空数组tab1遍历数组的数据，再用一个循环去获取数组的具体字段名称，用jq的append方法将其插入到div中 总结：这样的话不仅不用把数据写死在div中，又可以根据data数组的信息动态s生成排名和热度">
-<meta property="og:image" content="http://yoursite.com/2020/03/25/alen/show.jpg">
-<meta property="og:image" content="http://yoursite.com/2020/03/25/alen/data.jpg">
-<meta property="og:image" content="http://yoursite.com/2020/03/25/alen/append.jpg">
-<meta property="article:published_time" content="2020-03-25T08:15:48.246Z">
-<meta property="article:modified_time" content="2020-06-20T06:27:57.533Z">
+<meta property="og:description" content="1. vw、vh、vmin、vmax 的含义（1）vw、vh、vmin、vmax 是一种视窗单位，也是相对单位。它相对的不是父节点或者页面的根节点。而是由视窗             （Viewport）大小来决定的，单位 1，代表类似于 1%。单位100则代表100%。 ​            视窗(Viewport)是你的浏览器实际显示内容的区域—，换句话说是你的不包括工具栏和按钮的网页浏览">
+<meta property="og:image" content="http://yoursite.com/2020/06/20/rem%E6%95%99%E7%A8%8B/code.jpg">
+<meta property="article:published_time" content="2020-06-20T06:29:35.086Z">
+<meta property="article:modified_time" content="2020-06-20T07:11:45.686Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/03/25/alen/show.jpg">
+<meta name="twitter:image" content="http://yoursite.com/2020/06/20/rem%E6%95%99%E7%A8%8B/code.jpg">
 
 
 
@@ -122,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/03/25/alen/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/06/20/rem教程/"/>
 
 
 
 
 
-  <title>用vue调用存储的数据，用jq的方法动态创建插入tab选项卡 | De-Bruyne的小小博客</title>
+  <title>vw,vh和rem知识点 | De-Bruyne的小小博客</title>
   
 
 
@@ -235,7 +233,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/25/alen/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/20/rem%E6%95%99%E7%A8%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -252,7 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">用vue调用存储的数据，用jq的方法动态创建插入tab选项卡</h1>
+          <h1 class="post-title" itemprop="name headline">vw,vh和rem知识点</h1>
         
 
         <div class="post-meta">
@@ -264,8 +262,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-25T16:15:48+08:00">
-                2020-03-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-20T14:29:35+08:00">
+                2020-06-20
               </time>
             
 
@@ -302,10 +300,48 @@
       
 
       
-        <h2 id="首先我们要做的效果图是这样的"><a href="#首先我们要做的效果图是这样的" class="headerlink" title="首先我们要做的效果图是这样的"></a>首先我们要做的效果图是这样的</h2><p>​        <img src="/2020/03/25/alen/show.jpg" alt="function"></p>
-<h2 id="然后我们要搭建vue框架，然后在vue框架的data函数里面定义一些数据，然后再对其进行调用"><a href="#然后我们要搭建vue框架，然后在vue框架的data函数里面定义一些数据，然后再对其进行调用" class="headerlink" title="然后我们要搭建vue框架，然后在vue框架的data函数里面定义一些数据，然后再对其进行调用"></a>然后我们要搭建vue框架，然后在vue框架的data函数里面定义一些数据，然后再对其进行调用</h2><p><img src="/2020/03/25/alen/data.jpg" alt="function"></p>
-<h2 id="最后在methods函数里面定义点击事件，然后用一个空数组tab1遍历数组的数据，再用一个循环去获取数组的具体字段名称，用jq的append方法将其插入到div中"><a href="#最后在methods函数里面定义点击事件，然后用一个空数组tab1遍历数组的数据，再用一个循环去获取数组的具体字段名称，用jq的append方法将其插入到div中" class="headerlink" title="最后在methods函数里面定义点击事件，然后用一个空数组tab1遍历数组的数据，再用一个循环去获取数组的具体字段名称，用jq的append方法将其插入到div中"></a>最后在methods函数里面定义点击事件，然后用一个空数组tab1遍历数组的数据，再用一个循环去获取数组的具体字段名称，用jq的append方法将其插入到div中</h2><p><img src="/2020/03/25/alen/append.jpg" alt="function"></p>
-<h2 id="总结：这样的话不仅不用把数据写死在div中，又可以根据data数组的信息动态s生成排名和热度"><a href="#总结：这样的话不仅不用把数据写死在div中，又可以根据data数组的信息动态s生成排名和热度" class="headerlink" title="总结：这样的话不仅不用把数据写死在div中，又可以根据data数组的信息动态s生成排名和热度"></a>总结：这样的话不仅不用把数据写死在div中，又可以根据data数组的信息动态s生成排名和热度</h2>
+        <h2 id="1-vw、vh、vmin、vmax-的含义"><a href="#1-vw、vh、vmin、vmax-的含义" class="headerlink" title="1. vw、vh、vmin、vmax 的含义"></a>1. vw、vh、vmin、vmax 的含义</h2><p>（1）<strong>vw</strong>、<strong>vh</strong>、<strong>vmin</strong>、<strong>vmax</strong> 是一种视窗单位，也是相对单位。它相对的不是父节点或者页面的根节点。而是由视窗             （<strong>Viewport</strong>）大小来决定的，单位 <strong>1</strong>，代表类似于 <strong>1%</strong>。单位100则代表100%。</p>
+<p>​            视窗(<strong>Viewport</strong>)是你的浏览器实际显示内容的区域—，换句话说是你的不包括工具栏和按钮的网页浏览器。</p>
+<p>（2）具体描述如下：</p>
+<ul>
+<li><strong>vw</strong>：视窗宽度的百分比（<strong>1vw</strong> 代表视窗的宽度为 <strong>1%</strong>）</li>
+<li><strong>vh</strong>：视窗高度的百分比</li>
+<li><strong>vmin</strong>：当前 <strong>vw</strong> 和 <strong>vh</strong> 中较小的一个值</li>
+<li><strong>vmax</strong>：当前 <strong>vw</strong> 和 <strong>vh</strong> 中较大的一个值</li>
+</ul>
+<h2 id="2-vw、vh-与-百分比的区别"><a href="#2-vw、vh-与-百分比的区别" class="headerlink" title="2. vw、vh 与 % 百分比的区别"></a>2. vw、vh 与 % 百分比的区别</h2><p>（1）<strong>%</strong> 是相对于父元素的大小设定的比率，<strong>vw</strong>、<strong>vh</strong> 是视窗大小决定的。</p>
+<p>（2）<strong>vw</strong>、<strong>vh</strong> 优势在于能够直接获取高度，而用 <strong>%</strong> 在没有设置 <strong>body</strong> 高度的情况下，是无法正确获得可视区域的高度的，所以这是挺不错的优势。</p>
+<h2 id="3-vmin、vmax-用处"><a href="#3-vmin、vmax-用处" class="headerlink" title="3. vmin、vmax 用处"></a>3. vmin、vmax 用处</h2><p>​    做移动页面开发时，如果使用 <strong>vw</strong>、<strong>wh</strong> 设置字体大小（比如 <strong>5vw</strong>），在竖屏和横屏状态下显示的字体大小是不一样的。</p>
+<p>​    由于 <strong>vmin</strong> 和 <strong>vmax</strong> 是当前较小的 <strong>vw</strong> 和 <strong>vh</strong> 和当前较大的 <strong>vw</strong> 和 <strong>vh</strong>。这里就可以用到 <strong>vmin</strong> 和 <strong>vmax</strong>。使得文字大小在横竖屏下保持一致。</p>
+<h2 id="4-浏览器兼容性"><a href="#4-浏览器兼容性" class="headerlink" title="4.  浏览器兼容性"></a>4.  浏览器兼容性</h2><p>（1）桌面 <strong>PC</strong></p>
+<ul>
+<li><p><strong>Chrome</strong>：自 <strong>26</strong> 版起就完美支持（2013年2月）</p>
+</li>
+<li><p><strong>Firefox</strong>：自 <strong>19</strong> 版起就完美支持（2013年1月）</p>
+</li>
+<li><p><strong>Safari</strong>：自 <strong>6.1</strong> 版起就完美支持（2013年10月）</p>
+</li>
+<li><p><strong>Opera</strong>：自 <strong>15</strong> 版起就完美支持（2013年7月）</p>
+</li>
+<li><p><strong>IE</strong>：自 <strong>IE10</strong> 起（包括 <strong>Edge</strong>）到现在还只是部分支持（不支持 <strong>vmax</strong>，同时 <strong>vm</strong> 代替 <strong>vmin</strong>）</p>
+<p>（2）移动设备</p>
+</li>
+<li><p><strong>Android</strong>：自 <strong>4.4</strong> 版起就完美支持（2013年12月）</p>
+</li>
+<li><p><strong>iOS</strong>：自 <strong>iOS8</strong> 版起就完美支持（2014年9月）</p>
+</li>
+</ul>
+<h2 id="5-解释网页设计中经常看到的-body-font-size-62-5"><a href="#5-解释网页设计中经常看到的-body-font-size-62-5" class="headerlink" title="5. 解释网页设计中经常看到的 body{ font-size:62.5%}"></a>5. 解释网页设计中经常看到的 body{ font-size:62.5%}</h2><p>由于绝大多数浏览器中的默认font-size：16px; 进而默认情况下1rem = 16px。那1.2rem = ?(……经过几十秒的心算，罢了，我还是拿起计算器吧。)最后算出来1.2rem = 19.2px。</p>
+<p>经过上面的过程，心想，如果默认情况下1rem = 10px,那1.2rem = 12px(再也不用拿起计算器了，哦也)。而font-size:62.5%的由来就是10/16的值，这句css的目的就是把浏览器默认的根元素字体大小置为10px，方便rem和px的转换。</p>
+<p>由上可知：我们可以在自己的css代码中，为html{font-size:10px} body{font-size:100%},这样在做页面自适应时，rem的计算转换就简单多了。</p>
+<h2 id="6-js动态设置rem来实现移动端的自适应"><a href="#6-js动态设置rem来实现移动端的自适应" class="headerlink" title="6. js动态设置rem来实现移动端的自适应"></a>6. js动态设置rem来实现移动端的自适应</h2><p>原理：利用Js获取设备屏幕的宽度，并根据屏幕的宽度动态改变根元素html的font-siz属性的作用</p>
+<p>代码截屏：</p>
+<p><img src="/2020/06/20/rem%E6%95%99%E7%A8%8B/code.jpg" alt="function"></p>
+<p>注：对于iphone6而言，屏幕尺寸为750px，一般设计人员的设计稿也大都是以iphone6的屏幕尺寸设计，iphone6为基准做设备适配。</p>
+<h2 id="7-移动开发设计稿转换成页面尺寸的问题"><a href="#7-移动开发设计稿转换成页面尺寸的问题" class="headerlink" title="7. 移动开发设计稿转换成页面尺寸的问题"></a>7. 移动开发设计稿转换成页面尺寸的问题</h2><p>（1）设计稿的单位是px，一般是750px</p>
+<p>（2）页面若使用rem为单位，一般把转换设置为1rem = 10px（参考本文第一（“解释网页设计中经常看到的 body{ font-size:62.5%}”）部分）。</p>
+<p>（3）750px的设计图一375px量宽（即，设计稿是750px，转换成页面实际尺寸就是375px，页面尺寸是设计稿尺寸的二分之一）。例：若设计稿里面元素的宽度是100px，则页面尺寸就是 100/2/10 = 5rem</p>
+
       
     </div>
     
@@ -329,8 +365,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/03/24/%E9%BB%84%E7%8E%B2%E8%83%A1%E5%88%ABdb/" rel="next" title="菜鸟初次使用hexo">
-                <i class="fa fa-chevron-left"></i> 菜鸟初次使用hexo
+              <a href="/2020/03/25/alen/" rel="next" title="用vue调用存储的数据，用jq的方法动态创建插入tab选项卡">
+                <i class="fa fa-chevron-left"></i> 用vue调用存储的数据，用jq的方法动态创建插入tab选项卡
               </a>
             
           </div>
@@ -338,10 +374,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/06/20/rem%E6%95%99%E7%A8%8B/" rel="prev" title="vw,vh和rem知识点">
-                vw,vh和rem知识点 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -459,7 +491,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#首先我们要做的效果图是这样的"><span class="nav-number">1.</span> <span class="nav-text">首先我们要做的效果图是这样的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#然后我们要搭建vue框架，然后在vue框架的data函数里面定义一些数据，然后再对其进行调用"><span class="nav-number">2.</span> <span class="nav-text">然后我们要搭建vue框架，然后在vue框架的data函数里面定义一些数据，然后再对其进行调用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最后在methods函数里面定义点击事件，然后用一个空数组tab1遍历数组的数据，再用一个循环去获取数组的具体字段名称，用jq的append方法将其插入到div中"><span class="nav-number">3.</span> <span class="nav-text">最后在methods函数里面定义点击事件，然后用一个空数组tab1遍历数组的数据，再用一个循环去获取数组的具体字段名称，用jq的append方法将其插入到div中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结：这样的话不仅不用把数据写死在div中，又可以根据data数组的信息动态s生成排名和热度"><span class="nav-number">4.</span> <span class="nav-text">总结：这样的话不仅不用把数据写死在div中，又可以根据data数组的信息动态s生成排名和热度</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-vw、vh、vmin、vmax-的含义"><span class="nav-number">1.</span> <span class="nav-text">1. vw、vh、vmin、vmax 的含义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-vw、vh-与-百分比的区别"><span class="nav-number">2.</span> <span class="nav-text">2. vw、vh 与 % 百分比的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-vmin、vmax-用处"><span class="nav-number">3.</span> <span class="nav-text">3. vmin、vmax 用处</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-浏览器兼容性"><span class="nav-number">4.</span> <span class="nav-text">4.  浏览器兼容性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-解释网页设计中经常看到的-body-font-size-62-5"><span class="nav-number">5.</span> <span class="nav-text">5. 解释网页设计中经常看到的 body{ font-size:62.5%}</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-js动态设置rem来实现移动端的自适应"><span class="nav-number">6.</span> <span class="nav-text">6. js动态设置rem来实现移动端的自适应</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-移动开发设计稿转换成页面尺寸的问题"><span class="nav-number">7.</span> <span class="nav-text">7. 移动开发设计稿转换成页面尺寸的问题</span></a></li></ol></div>
             
 
           </div>
